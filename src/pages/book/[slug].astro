@@ -17,6 +17,12 @@ const book = books.find((b: { slug: string }) => b.slug === Astro.params.slug);
     <section>
         <div class="bg-white z-99 relative pb-5 min-h-[80.5vh] flex md:items-center">
           <div class="mx-auto px-[10%] py-6">
+<iframe src={book.embed}
+scrolling="no"
+                title={book.title}
+                frameBorder={0}
+                allowFullScreen="true"
+            ></iframe>
             <div class="mt-6 md:flex gap-10 items-center">
               <div class="w-full md:max-w-[30%]">
                 <img
@@ -25,12 +31,6 @@ const book = books.find((b: { slug: string }) => b.slug === Astro.params.slug);
                   class="w-full bg-gray-200 object-cover group-hover:opacity-75"
                 />
               </div>
-<iframe src={book.embed}
-scrolling="no"
-                title={book.title}
-                frameBorder={0}
-                allowFullScreen="true"
-            ></iframe>
               <div class="md:max-w-[50%] mt-6 md:mt-0">
                 <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{book.title}</h1>
                 <div class="py-10 lg:col-span-2 lg:col-start-1 lg:pt-6 lg:pr-8 lg:pb-16">
