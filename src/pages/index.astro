@@ -1,7 +1,7 @@
 ---
-import { fetchBooks } from "../utils/fetchBooks";
-import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
+import { fetchBooks } from "../../utils/fetchBooks";
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const books = await fetchBooks();
