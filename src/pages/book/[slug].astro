@@ -13,14 +13,14 @@ const book = books.find((b: { slug: string }) => b.slug === Astro.params.slug);
 ---
 
 <Layout title={book.title}>
-    
-    <section>
 <iframe src={book.embed}
 scrolling="no"
                 title={book.title}
                 frameBorder={0}
                 allowFullScreen="true"
             ></iframe>
+    
+    <section>
         <div class="bg-white z-99 relative pb-5 min-h-[80.5vh] flex md:items-center">
           <div class="mx-auto px-[10%] py-6">
             <div class="mt-6 md:flex gap-10 items-center">
