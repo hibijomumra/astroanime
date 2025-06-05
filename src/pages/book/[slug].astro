@@ -19,7 +19,7 @@ const book = books.find((b: { slug: string }) => b.slug === Astro.params.slug);
 scrolling="no"
                 title={book.title}
                 frameBorder={0}
-                allowFullScreen={true}
+                allowFullScreen="true"
             ></iframe>
         <div class="bg-white z-99 relative pb-5 min-h-[80.5vh] flex md:items-center">
           <div class="mx-auto px-[10%] py-6">
